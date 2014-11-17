@@ -297,10 +297,16 @@ class ChartPresentation(Presentation):
     def __init__(self,
                  title       = None,
                  options     = None,
+                 targetlink  = None,
+		 threshold_critical = False,
+		 threshold_warning = False,
                  interactive = True,
                  **kwargs):
         super(ChartPresentation, self).__init__(**kwargs)
         self.title       = title
+	self.targetlink  = targetlink
+	self.threshold_critical  = threshold_critical
+	self.threshold_warning  = threshold_warning
         self.options     = options or {}
         self.interactive = interactive
 
